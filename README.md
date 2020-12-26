@@ -13,4 +13,5 @@ it is a python-module aggregates common-scripts-logic
         * [x] func: RemoveIf - removes all elements from the iterable object where the condition applied for the each elements returns logically true --> the received iterable object
         * [x] func: RemoveIfCopy - removes all elements from the deep-copy of the iterable object where the condition applied for the each elements returns logically true --> deep-copy of the iterable object without removed elements
         * [x] func: TransformToMap - transforms the iterable object to map-data-structure by transformation-logic-function applying --> created map-data-structure
-    * [x] **cmd** - a module for executing cmd-commands
+    * [x] module: **cmd** - a module for executing cmd-commands
+        * [x] func: ExecuteCmdCommand - executes the cmd-command --> true - if the command successfully executed, false - otherwise
