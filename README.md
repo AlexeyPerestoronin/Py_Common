@@ -18,6 +18,14 @@ it is a python-module aggregates common-logic for any python-scripts
         * [x] func: TransformToMap - transforms the iterable object to map-data-structure by transformation-logic-function applying --> created map-data-structure
     * [x] module: **cmd** - a module for executing cmd-commands
         * [x] func: ExecuteCmdCommand - executes the cmd-command --> true - if the command successfully executed, false - otherwise
+    * [x] module: **log** - a module implements a log-logic
+        * [x] class: Logger - a class implements logging logic
+            * [x] c-method: RegisterRecipient - registers new log-recipient --> nothing
+            * [x] method: LogMessage - log show-message --> nothing
+            * [x] method: LogInfo - log info-message --> nothing
+            * [x] method: LogResult - log result-message --> nothing
+            * [x] method: LogWarning - log warning-message --> nothing
+            * [x] method: LogError - log error-message --> nothing
     * [x] module: **faf** - a module for performing base operations with files and folders in OS
         * [x] func: PathToLnx - transforms system-path like linux-system-path --> the received path transformed as linux-system-path
         * [x] func: GetFoldersInCatalog - finds all folders in catalog --> list of found folders
