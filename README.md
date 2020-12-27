@@ -2,7 +2,10 @@
 it is a python-module aggregates common-logic for any python-scripts
 ***
 ## Content
-* [x] module: **common**
+* [x] module: **common** - a module implements common-logic for py-scripts
+    * [x] func: IsIterable - checks if the object is iterable --> true - if the object is iterable; false - in vise versa
+    * [x] func: MakeIterable - makes the object iterable --> iterable object
+    * [x] func: PerformOrDefault - attempting perform the action or the default value if some exception raised --> result of the action or default value
     * [x] module: **algorithms** - a module that implements some general data processing algorithms
         * [x] func: FindFirstIf - searches among the elements of the iterable object for the first one that satisfies the condition --> first satisfying element, or None - if no one elements
         * [x] func: FindLastIf - searches among the elements of the iterable object for the first one last satisfies the condition --> last satisfying element, or None - if no one elements
