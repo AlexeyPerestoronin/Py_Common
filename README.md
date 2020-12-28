@@ -16,11 +16,14 @@ it is a python-module aggregates common-logic for any python-scripts
         * [x] func: RemoveIf - removes all elements from the iterable object where the condition applied for the each elements returns logically true --> the received iterable object
         * [x] func: RemoveIfCopy - removes all elements from the deep-copy of the iterable object where the condition applied for the each elements returns logically true --> deep-copy of the iterable object without removed elements
         * [x] func: TransformToMap - transforms the iterable object to map-data-structure by transformation-logic-function applying --> created map-data-structure
+        * [x] func: TransformToList - transform the iterable object to list-data-structure by transformation-function-logic applying --> created list-data-structure
+        * [x] func: TransformToListFromMap - transform the target map-data-structure to list-data-structure by transformation-function-logic applying --> created list-data-structure
     * [x] module: **cmd** - a module for executing cmd-commands
         * [x] func: ExecuteCmdCommand - executes the cmd-command --> true - if the command successfully executed, false - otherwise
     * [x] module: **log** - a module implements a log-logic
         * [x] class: Logger - a class implements logging logic
-            * [x] c-method: RegisterRecipient - registers new log-recipient --> nothing
+            * [x] c-method: RegisterRecipient - registers new log-recipient --> name of registered recipients
+            * [x] c-method: RegisterMethod - registers new method for existent log-recipient --> name of recipient for which new method was be registered
             * [x] method: LogMessage - log show-message --> nothing
             * [x] method: LogInfo - log info-message --> nothing
             * [x] method: LogResult - log result-message --> nothing

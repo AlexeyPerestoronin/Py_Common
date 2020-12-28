@@ -42,7 +42,7 @@ def SplitPath2(filepath):
 # param: filepath - full path to the target file
 # return: catalog and filename from filepath
 def SplitPath3(filepath):
-    return *os.path.split(filepath)
+    return os.path.split(filepath)
 
 # brief: split system path on elements
 # param: system_path - target system path
