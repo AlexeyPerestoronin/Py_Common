@@ -40,7 +40,8 @@ it is a python-module aggregates common-logic for any python-scripts
         * [x] func: SearchAllFilesFromRoot1 - searches all files, which names in the filesnames, from the root-directory and to the end-directory --> massive of the full paths to the searched files
         * [x] func: SearchAllFilesFromRoot2 - searches all files, which names is satisfies any condition from the filename_regexes, from the root-directory and to the end-directory --> massive of the full paths to the searched files
         * [x] func: GetFileContent - gets full content of the file --> content of the target file
-        * [x] func: SaveContentToFile - saves content in the file --> nothing
+        * [x] func: SaveContentToFile1(filepath, content) - saves content in the file --> nothing
+        * [x] func: SaveContentToFile2(directory, filename, content) - saves content in the file --> nothing
         * [x] func: IsDirectoryExist - checks if the directory exists --> true - if the directory exists; false - in vise versa
         * [x] func: IsFileExist1(filepath) - checks if the file exist in the directory --> true - is the file exists; false - in vise versa
         * [x] func: IsFileExist2(directory, filename) - checks if the file exist in the directory --> true - is the file exists; false - in vise versa
