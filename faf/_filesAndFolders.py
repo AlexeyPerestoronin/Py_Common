@@ -88,6 +88,12 @@ def SearchAllFilesFromRoot2(root_directoryes, filename_regexes):
 def IsDirectoryExist(directory):
     return os.path.exists(directory) and os.path.isdir(directory)
 
+# brief: creates directory if not exists
+# param: directory - name of the target directory
+def CreateDirectory(directory):
+    if not IsDirectoryExist(directory):
+        os.makedirs(directory)
+
 # brief: checks if the file exist in the directory
 # param: filepath - full system path to the target file
 # return: true - is the file exists; false - in vise versa
@@ -153,6 +159,13 @@ def CleanDirectory(directory, is_remove_all_files=True, is_remove_all_folders=Tr
 # param: filename_new - new name for target file
 def RenameFile(catalog, filename_old, filename_new):
     os.rename(os.path.join(catalog, filename_old), os.path.join(catalog, filename_new))
+
+# brief: renames catalog in directory
+# param: directory - directory with target catalog
+# param: catalogname_old - current name of the catalog in the directory
+# param: catalogname_new - new name for the catalog in the directory
+def RenameCatalog(directory, catalogname_old, catalogname_new):
+    os.rename(os.path.join(directory, catalogname_old), os.path.join(directory, catalogname_new))
 
 # brief: makes target system path with relative sections direct (without relative sections)
 # example 1: C:/Qt/../Qt/../Qt/bin --> C:/Qt/bin

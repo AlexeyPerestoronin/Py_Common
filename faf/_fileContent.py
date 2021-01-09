@@ -22,3 +22,17 @@ def SaveContentToFile1(filepath, content):
 # param: content - the new content of the target file
 def SaveContentToFile2(directory, filename, content):
     SaveContentToFile1(os.path.join(directory, filename), content)
+
+# brief: adds content to the file
+# param: filepath - full path to the target file
+# param: content - additional content for the file
+def AddContentToFile1(filepath, content):
+    with open(filepath, 'a') as fire_writer:
+        fire_writer.write(content)
+
+# brief: adds content to the file
+# param: directory - target directory with the file
+# param: filename - the name of target file
+# param: content - additional content for the file
+def AddContentToFile2(directory, filename, content):
+    AddContentToFile1(os.path.join(directory, filename), content)

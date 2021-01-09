@@ -42,7 +42,10 @@ it is a python-module aggregates common-logic for any python-scripts
         * [x] func: GetFileContent - gets full content of the file --> content of the target file
         * [x] func: SaveContentToFile1(filepath, content) - saves content in the file --> nothing
         * [x] func: SaveContentToFile2(directory, filename, content) - saves content in the file --> nothing
+        * [x] func: AddContentToFile1(filepath, content) - adds content to the file --> nothing
+        * [x] func: AddContentToFile2(directory, filename, content) - adds content to the file --> nothing
         * [x] func: IsDirectoryExist - checks if the directory exists --> true - if the directory exists; false - in vise versa
+        * [x] func: CreateDirectory - creates directory if not exists --> nothing
         * [x] func: IsFileExist1(filepath) - checks if the file exist in the directory --> true - is the file exists; false - in vise versa
         * [x] func: IsFileExist2(directory, filename) - checks if the file exist in the directory --> true - is the file exists; false - in vise versa
         * [x] func: IsFileExist3 - checks existence the files, satisfying the conditional of the regex-expression, exists in the catalog --> the list with the full files paths which was satisfy matching condition
@@ -51,5 +54,6 @@ it is a python-module aggregates common-logic for any python-scripts
         * [x] func: DeleteFile3 - deletes the file from OS by reges-expression matching (if more then one files will matching by regex-expression, each of them will remove) --> nothing
         * [x] func: CleanDirectory - deletes all files and folders from directory --> nothing
         * [x] func: RenameFile - renames file in catalog --> nothing
+        * [x] func: RenameCatalog -> renames catalog in directory --> nothing
         * [x] func: MakePathDirect - makes target system path with relative sections direct (without relative sections) --> direct system path  
         * [x] func: JoinToSystemPaths - joins two parts of the one path --> the joined system path

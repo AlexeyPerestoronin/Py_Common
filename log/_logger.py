@@ -1,4 +1,5 @@
 import common
+import common.algorithms as alg
 import common.log.const as const
 
 # brief: a class implements logging logic
@@ -123,8 +124,14 @@ class Logger:
         Logger.__recipients[recipient_name] = {const.METHODS : [[method, is_new_line]], const.COUNTER : 0}
         return recipient_name
 
+    # brief: unregisters log-recipient by its key if one exist
+    # param: recipient_name - access-key for registered recipient
+    @staticmethod
+    def UnregisterRecipient(recipient_name):
+        Logger.__recipients.pop(recipient_name)
+
     # brief: registers new method for existent log-recipient
-    # param: recipient_name - access-key for new registered recipient
+    # param: recipient_name - access-key for registered recipient
     # param: method - a method which will be called for logging
     # param: is_new_line - flag: if true - each log-message will be logged with new line; if false - vise versa
     # return: name of recipient for which new method was be registered
@@ -136,3 +143,10 @@ class Logger:
             raise "registers method must be calable"
         Logger.__recipients[recipient_name][const.METHODS].append([method, is_new_line])
         return recipient_name
+
+    # brief: unregisters method for existent log-recipient if the method exists
+    # param: recipient_name - access-key for registered recipient
+    # param: method - the unregistering method
+    @staticmethod
+    def UnregisterMethod(recipient_name, method, is_new_line=False):
+        alg.RemoveIf(Logger.__recipients[recipient_name][const.METHODS], lambda registered_method: registered_method == method )
