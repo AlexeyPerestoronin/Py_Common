@@ -13,8 +13,12 @@ it is a python-module aggregates common-logic for any python-scripts
         * [x] func: ForEach - executes the action for all elements of the iterable object --> the received iterable object
         * [x] func: PerformForEach - executes the action for each elements of the iterable object and assigns the result for the each elements by order --> the received iterable object
         * [x] func: PerformForEachCopy - executes the action for each elements for the deep-copy of the iterable object and assigns the result for the each copied elements by order --> deep-copy of the iterable object for which the action was be performed for the its own elements
+        * [x] func: PerformForEachDict -  executes the action for each elements of the dictionary and assigns the result for the each elements by order --> the received dictionary
+        * [x] func: PerformForEachDictCopy -  executes the action for each elements of the dictionary and assigns the result for the each elements by order --> deep-copy of the received dictionary for which the action was be performed for the its own elements
         * [x] func: RemoveIf - removes all elements from the iterable object where the condition applied for the each elements returns logically true --> the received iterable object
-        * [x] func: RemoveIfCopy - removes all elements from the deep-copy of the iterable object where the condition applied for the each elements returns logically true --> deep-copy of the iterable object without removed elements
+        * [x] func: RemoveIfCopy - removes all elements from the deep-copy of the iterable object where the condition applied for the each elements returns logically true --> deep-copy of the received iterable object without removed elements
+        * [x] func: RemoveFromDictIf - removes all elements from the dictionary where the condition applied for the each elements returns logically true --> the received dictionary without removed elements
+        * [x] func: RemoveFromDictIfCopy - removes all elements from the dictionary where the condition applied for the each elements returns logically true --> deep-copy of the received dictionary without removed elements
         * [x] func: TransformToMap - transforms the iterable object to map-data-structure by transformation-logic-function applying --> created map-data-structure
         * [x] func: TransformToList - transform the iterable object to list-data-structure by transformation-function-logic applying --> created list-data-structure
         * [x] func: TransformToListFromMap - transform the target map-data-structure to list-data-structure by transformation-function-logic applying --> created list-data-structure
