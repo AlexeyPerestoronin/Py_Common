@@ -6,6 +6,9 @@ it is a python-module aggregates common-logic for any python-scripts
     * [x] func: IsIterable - checks if the object is iterable --> true - if the object is iterable; false - in vise versa
     * [x] func: MakeIterable - makes the object iterable --> iterable object
     * [x] func: PerformOrDefault - attempting perform the action or the default value if some exception raised --> result of the action or default value
+    * [x] func: Execute1Or2 - execute first callable-object or second one if the exception will raise --> result of call some of two objects
+    * [x] func: TryExecute - try execute the callable-object --> result of call the callable-object or None if the exception was be raised
+    * [x] class: Lambda - implements logic like lambda-expression
     * [x] module: **algorithms** - a module that implements some general data processing algorithms
         * [x] func: FindFirstIf - searches among the elements of the iterable object for the first one that satisfies the condition --> first satisfying element, or None - if no one elements
         * [x] func: FindLastIf - searches among the elements of the iterable object for the first one last satisfies the condition --> last satisfying element, or None - if no one elements

@@ -30,3 +30,30 @@ def PerformOrDefault(action, default_value):
         return action()
     except Exception:
         return default_value
+
+# brief: execute first callable-object or second one if the exception will raise
+# param: callable_object_1 - first callable-object
+# param: exception - the exception-class that must raise for call the second callable-object
+# param: callable_object_2 - second callable-object
+# return: result of call some of two objects
+def Execute1Or2(callable_object_1, exception, callable_object_2):
+    try:
+        return callable_object_1()
+    except exception:
+        return callable_object_2()
+
+# brief: try execute the callable-object
+# param: callable_object - callable-object
+# param: exception - the exception-class that might be raised inside the callable-object
+# return: result of call the callable-object or None if the exception was be raised
+def TryExecute(callable_object, exception=None):
+    if exception:
+        try:
+            return callable_object()
+        except exception:
+            pass
+    else:
+        try:
+            return callable_object()
+        except:
+            pass
