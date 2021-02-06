@@ -42,18 +42,47 @@ def Execute1Or2(callable_object_1, exception, callable_object_2):
     except exception:
         return callable_object_2()
 
+# briefly: try to execute the called object a certain number of times
+# param: callable_object - callable-object
+# param: TheExceptionClass - the exception-class that might be raised inside the callable-object
+# param: repeat - number of attempts of call
+# return: result of call the callable-object or None if the exception was be raised
+def TryExecuteOrRepeat(callable_object, TheExceptionClass=None, *, repeat=10):
+    for _ in range(repeat):
+        if TheExceptionClass:
+            try:
+                return callable_object()
+            except TheExceptionClass:
+                pass
+        else:
+            try:
+                return callable_object()
+            except:
+                pass
+
 # brief: try execute the callable-object
 # param: callable_object - callable-object
 # param: exception - the exception-class that might be raised inside the callable-object
 # return: result of call the callable-object or None if the exception was be raised
 def TryExecute(callable_object, exception=None):
-    if exception:
-        try:
-            return callable_object()
-        except exception:
-            pass
-    else:
-        try:
-            return callable_object()
-        except:
-            pass
+    return TryExecuteOrRepeat(callable_object, exception, repeat=1)
+
+# briefly: try to execute the called object a certain number of times
+# param: callable_object - callable-object
+# param: TheExceptionClass - the exception-class that might be raised inside the callable-object
+# param: repeat - number of attempts of call
+# return: result of call the callable-object or raises last appeared exception
+def ExecuteOrRepeat(callable_object, TheExceptionClass=None, *, repeat=10):
+    last_exception = None
+    for _ in range(repeat):
+        if TheExceptionClass:
+            try:
+                return callable_object()
+            except TheExceptionClass as error:
+                last_exception = error
+        else:
+            try:
+                return callable_object()
+            except Exception as error:
+                last_exception = error
+    raise last_exception
