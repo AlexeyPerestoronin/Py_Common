@@ -11,6 +11,10 @@ it is a python-module aggregates common-logic for any python-scripts
     * [x] func: TryExecute - try execute the callable-object --> result of call the callable-object or None if the exception was be raised
     * [x] func: ExecuteOrRepeat - try to execute the called object a certain number of times --> result of call the callable-object or raises last appeared exception
     * [x] class: Lambda - implements logic like lambda-expression
+    * [x] module: **precision** - a module that implements logic for round numbers
+        * [x] class: Round - implements logic for round numbers
+            * [x] func: Up - round the value up --> rounded value
+            * [x] func: Down - round the value down --> rounded value
     * [x] module: **algorithms** - a module that implements some general data processing algorithms
         * [x] func: FindFirstIf - searches among the elements of the iterable object for the first one that satisfies the condition --> first satisfying element, or None - if no one elements
         * [x] func: FindLastIf - searches among the elements of the iterable object for the first one last satisfies the condition --> last satisfying element, or None - if no one elements
