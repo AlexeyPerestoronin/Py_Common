@@ -14,7 +14,9 @@ it is a python-module aggregates common-logic for any python-scripts
     * [x] module: **precision** - a module that implements logic for round numbers
         * [x] class: Round - implements logic for round numbers
             * [x] func: Up - round the value up --> rounded value
+            * [x] func: UpDecimal - round the value (must be a Decimal value) up --> rounded value
             * [x] func: Down - round the value down --> rounded value
+            * [x] func: DownDecimal - round the value (must be a Decimal value) down --> rounded value
     * [x] module: **algorithms** - a module that implements some general data processing algorithms
         * [x] func: FindFirstIf - searches among the elements of the iterable object for the first one that satisfies the condition --> first satisfying element, or None - if no one elements
         * [x] func: FindLastIf - searches among the elements of the iterable object for the first one last satisfies the condition --> last satisfying element, or None - if no one elements

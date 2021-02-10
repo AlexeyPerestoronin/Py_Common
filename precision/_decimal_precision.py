@@ -11,16 +11,28 @@ class Round:
     def Up(self, value):
         return float(d.Decimal(value).quantize(self._precision, d.ROUND_CEILING))
 
+    # brief: round the value up
+    # param: value - target value (must be a Decimal value)
+    # return: rounded value
+    def UpDecimal(self, value):
+        return value.quantize(self._precision, d.ROUND_CEILING)
+
     # brief: round the value down
     # param: value - target value
     # return: rounded value
     def Down(self, value):
         return float(d.Decimal(value).quantize(self._precision, d.ROUND_FLOOR))
 
+    # brief: round the value down
+    # param: value - target value (must be a Decimal value)
+    # return: rounded value
+    def DownDecimal(self, value):
+        return value.quantize(self._precision, d.ROUND_FLOOR)
+
     # brief: compute precision
     # param: precision - new value of a precision (must be positive integer number)
     # return: decimal-number like 1.0...<precision>...0
     @staticmethod
     def ComputePrecision(precision):
-        result = "1." + "".join(["0" for _ in range(precision)])
+        result = "1." + "".join(["0" for _ in range(int(precision))])
         return d.Decimal(result)
