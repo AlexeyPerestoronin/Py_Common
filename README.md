@@ -3,6 +3,8 @@ it is a python-module aggregates common-logic for any python-scripts
 ***
 ## Content
 * [x] module: **common** - a module implements common-logic for py-scripts
+    * [x] fund: CONSTANT - the function is create metaclass for creation constant-class --> metaclass for constant-class creation
+    * [x] fund: CREATE_CONSTANT - the function is create a constant-class --> new constant-class
     * [x] func: IsIterable - checks if the object is iterable --> true - if the object is iterable; false - in vise versa
     * [x] func: MakeIterable - makes the object iterable --> iterable object
     * [x] func: PerformOrDefault - attempting perform the action or the default value if some exception raised --> result of the action or default value
